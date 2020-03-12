@@ -14,7 +14,7 @@ header
     display: flex;
     max-width: 1920px;
     min-width: 600px;
-    background-color: beige;
+    background-color: rgb(223, 223, 166);
     box-shadow: inset rgba(0, 0, 0, 0.589) 0 0 10px 10px;
 }
 header > #headImg
@@ -56,13 +56,15 @@ header > div > h1
 nav
 {
     max-width: 1920px;
-    background-color: rgba(165, 255, 162, 0.212);
+    background-color: rgba(56, 25, 0, 0.685);
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-width: 600px;
-    padding-top: 10px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    
 }
 
 .navigation /* links */
@@ -79,16 +81,106 @@ nav
     margin: 0 auto;
     font-weight: 1000;
     transition: 0.33s; 
-    
+    line-height: 70px;
+    margin: 10px;
 }   
 .navigation:hover
 {
     box-shadow: 0px 15px black;
-    transform: translateY(-10px);
+    transform: translateY(-15px) scaleX(0.9) scaleY(1.1);
     transition: 0.33s;  
     background-color: rgb(0, 224, 30);
+
+}
+.navigation:active
+{
+    box-shadow: 0px 0px 8px black;
+    transform: translateY(7px) scaleX(1.1) scaleY(0.9);
+    transition: 0.1s;
+    
 }
 nav > a
 {
     text-decoration: none;
+    vertical-align: middle;
+
 }
+
+/* Main article styles */
+article
+{
+    background-color: beige;
+    padding: 30px;
+    max-width: 1860px;
+    min-width: 600px;
+}
+h3
+{
+    font-size: 3em;
+    font-weight: 800;
+}
+article > #content1
+{
+    display: flex;
+    max-width: 1860px;
+    justify-content: space-around;
+    min-width: 600px;
+    
+
+}
+
+article > #content1 > p
+{
+    width: 620px;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 10px;
+}
+
+article > #content1 > img
+{
+    width: 33%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+footer
+{
+    padding: 30px;
+    background-color: black;
+    max-width: 1860px;
+    min-width: 600px;
+
+}
+
+
+/*  Copyright policy area */
+footer > hr
+{
+    border: 1px rgba(255, 255, 255, 0.418) solid;
+    border-radius: 50%;
+}
+
+footer > p    
+{
+    color: rgb(147, 239, 255);
+    font-size: 1.75em;
+}
+
+footer > p#copyright    
+{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
