@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fun Happy Pre-School</title>
+
+        <link rel="stylesheet" type="text/css" href="css/Reset.css">
+        <link rel="stylesheet" type="text/css" href="css/Layout.css">
+        <script src="js/Function.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/happySun.png" type="image/x-icon" sizes="16x16 32x32">
+
+        <!--SCRIPT GOES HERE-->
+        <!--The sign up page script focuses on refresh functions and submit functions-->
+        <script>
+
+             window.onbeforeunload = function()     //this function gives the user a pop-up when the page is going to be reloaded, saying that changes will not be saved.  The browser itself will take care of what happens afterwards, such as the option to continue with reloading the page or cancelling the reload to preserve the form information put by the user
+            {
+                return "";  
+            };
+
+            function submitForm()
+            {
+                alert("Your information has been submitted to the Fun Happy Cool Pre-School administrators.  Feedback on this information will arrive within the next few days!")
+            }
+
+
+        </script>
+
+    </head>
+
+
+    <body>
+
+        <div id="websiteArea">
+            <header>    <!--Header image and title goes here-->
+                <div id="headImg"><img src="images/happySun.png"></div>
+                <div id="headTitle"><h1>Fun Happy Cool Pre-School</h1></div>
+            </header>
+            <hr id="divider">
+
+            <!--navigation Area-->
+            <nav>   
+                <a href="index.html"><div class="navigation">Home</div></a>
+                <a href="classes.html"><div class="navigation">Classroom</div></a>
+                <a href="trips.html"><div class="navigation">Field Trip</div></a>
+                <a href="signup.html"><div class="navigation" style="border: rgb(91, 203, 255) solid 5px; width: 140px; height: 70px; font-size: 2.75em;">Sign Up</div></a>
+                <a href="contact.html"><div class="navigation">Contact Us</div></a>
+            </nav>
+
+            
+            <article>
+                <h3>Sign Your Kid Up for Fun Happy Cool Pre-School</h3>
+
+                <hr>
+
+                <div>
+                    
+                    <form>
+                        <div id="legend">* required field</div> <!--Legend shows the required * icon-->
+                        <div>
+                            <label name="fname">First Name (Parent/Guardian)<a class="required">*</a></label> <!--<a class="required">*</a> is the code for creating a red asterisk to show a required field-->
+                            <input type="text" id="fname" name="fname" required>
+                        </div>
+
+                        <div>
+                            <label name="lname">Last Name (Parent/Guardian)<a class="required">*</a></label>
+                            <input type="text" id="lname" name="lname" required>
+                        </div>
+
+                        <div>
+                            <label name="fname2">First Name (Other Parent/Guardian)</label>
+                            <input type="text" id="fname2" name="fname2">
+                        </div>
+
+                        <div>
+                            <label name="lname2">Last Name (Other Parent/Guardian)</label>
+                            <input type="text" id="lname2" name="lname2">
+                        </div>
+
+                        <div>
+                            <label name="hphone">Home Phone</label>
+                            <input type="tel" id="hphone" name="hphone" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+
+                        <div>
+                            <label name="pphone">Parent/Guardian Personal Phone<a class="required">*</a></label>
+                            <input type="tel" id="pphone" name="pphone" required placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+
+                        <div>
+                            <label name="pphone2">Other Parent/Guardian Personal Phone</label>
+                            <input type="tel" id="pphone2" name="pphone2" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+
+                        <div>
+                            <label name="email">Parent/Guardian Personal Email<a class="required">*</a></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label name="email2"> Other Parent/Guardian Personal Email</label>
+                            <input type="email" id="email2" name="email2">
+                        </div>
+
+                        <div>
+                            <label name="kid">First Name of Child<a class="required">*</a></label>
+                            <input type="text" id="kid" name="kid" required>
+                        </div>
+
+                        
+                        <div>
+                            <label name="Bkid">Birthdate of Child<a class="required">*</a></label>
+                            <input type="date" id="Bkid" name="Bkid" required>
+                        </div>
+
+
+                        <div>
+                            <input type="submit" value="Submit" onclick="submitForm()">     <!--Submit button is here, it causes a function in this page's javascript-->
+                        </div>
+
+
+                    </form>
+                </div>
+            </article>
+
+            <!--Footer section goes here, simply shows company name and a general statement-->
+            <footer>
+                <p>Fun Happy Cool Pre-School&reg; provides equal services regardless of the individual's race, religion, or gender.  Those in need will be supported accordingly, and our campus strives to give every student equal opportunity.</p>
+                <hr>
+                <p id="copyright">&copy; 2020 Fun Happy Cool Inc. </p>
+            </footer>
+        </div>
+
+    </body>
+
+
+</html>

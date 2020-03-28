@@ -11,7 +11,7 @@ body
     background-color: rgb(177, 250, 255);
 }
 
-div#websiteArea
+div#websiteArea     /* the overall website has a minimum size, so zooming in too far requires horizontal scrolling.  This is done to minimize issues with smaller devices and the scaling of the website as a whole*/
 {
     margin: auto;
     box-shadow: 0px 0px 10px 10px black;
@@ -92,7 +92,7 @@ nav
 
 .navigation /* links */
 {   
-    width: 200px;
+    width: 150px;
     height: 80px;
     border-radius: 10px;
     background-color: rgb(0, 117, 16);
@@ -142,25 +142,51 @@ h3
     font-size: 3em;
     font-weight: 800;
 }
-article > #content1
+h4
+{
+    font-size: 2.75em;
+    font-weight: 700;
+}
+article > .content1
 {
     display: flex;
     max-width: 1860px;
-    justify-content: space-around;
+    justify-content: space-between;
     min-width: 600px;
     
 
 }
 
-article > #content1 > p
+article > .content1 > p
 {
-    width: 620px;
+    width: 600px;
     font-size: 2em;
     font-weight: 600;
     margin: 10px;
+    line-height: 45px;
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(53, 21, 8, 0.205);
+}
+article > .content1 > div
+{
+    width: 620px;
+    margin: 10px;
+}
+article > .content1 > div > p
+{
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 45px;
+    margin-bottom: 40px;
+    background-color: rgba(53, 21, 8, 0.205);
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-article > #content1 > img
+article > .content1 > img
 {
     width: 33%;
     border-radius: 10px;
@@ -168,6 +194,159 @@ article > #content1 > img
     margin: 10px;
     max-height: 20em;
     min-height: 5em;
+}
+
+article > .content1 > p > img
+{
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    max-height: 20em;
+    min-height: 5em;
+    float: bottom;
+    clear: both;
+}
+
+#schedule
+{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 6px 10px black;
+}
+
+#schedule > ul > li
+{
+    font-size: 2.25em;
+    padding-top: 20px;
+}
+
+/* sign up form styles */
+form
+{
+    margin: auto;
+    width: 600px;
+    background-color: rgba(21, 166, 185, 0.685);
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 25px black;
+}
+#legend
+{
+    color: red;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.required
+{
+    color: red;
+}
+label
+{
+    font-size: 1.75em;
+    font-weight: 600;
+
+    
+}
+form > div
+{
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    
+}
+input
+{
+    position: relative;
+    display: block;
+    font-size: 1.75em;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 10px;
+}
+
+input[type="submit"]
+{
+    width: 25%;
+    font-family: 'Amatic';
+    font-weight: 900;
+    font-size: 3em;
+    background-color: rgb(0, 117, 16);
+    border: transparent;
+    box-shadow: 0px 5px rgb(39, 39, 39);
+    color: white;
+    transition: 0.25s;
+}
+
+input[type="submit"]:hover
+{
+    box-shadow: 0px 10px black;
+    transform: translateY(-10px) scaleX(0.9) scaleY(1.1);
+    transition: 0.33s;  
+    background-color: rgb(0, 177, 24);
+}
+
+input[type="submit"]:active
+{
+    box-shadow: 0px 0px 8px 2px black;
+    transform: translateY(7px) scaleX(1.1) scaleY(0.9);
+    transition: 0.1s;
+}
+
+
+/*contact page styles */
+h5
+{
+    font-size: 3.5em;
+    font-weight: 900;
+}
+#contacts
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#contacts > div
+{
+    background-color: rgba(111, 204, 216, 0.685);
+    box-shadow: 0px 1px 10px 1px black;
+    margin: 30px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#contacts > div:hover
+{
+    background-color: rgba(111, 204, 216, 0.685);
+    box-shadow: 0px 1px 10px 1px black;
+    margin: 30px;
+    padding: 10px;
+    transform: scale(1.1);
+    transition: 0.25s;
+}
+
+#contacts > div > p
+{
+    font-size: 2.5em;
+    font-weight: 800;
+    
+}
+
+#socialMedia
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#socialMedia > a > img
+{
+    width: 200px;
+    margin: 20px;
 }
 
 
@@ -209,3 +388,23 @@ footer > p#copyright
     text-align: center;
 }
 
+
+@media only screen and (max-width: 799px) /* This media query takes care of the navigation sizing issues present when zooming in up to a certain point*/
+
+{
+
+nav
+{
+    height: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+.navigation
+{
+    margin: 0px;
+    width: 100px;
+    font-size: 1.5em;
+}
+}
